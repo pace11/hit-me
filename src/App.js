@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import {
   BsFillCheckCircleFill,
   BsFillXCircleFill,
+  BsLightningChargeFill,
 } from 'react-icons/bs'
 import {
   useQuery,
@@ -129,6 +130,11 @@ function App() {
 
   return (
     <Container>
+      <Row>
+        <h3 style={{ textAlign: 'center' }}>
+          Hit Me <BsLightningChargeFill />
+        </h3>
+      </Row>
       <Row>
         <Col lg={12} md={12}>
           <Form>
