@@ -42,6 +42,7 @@ function App() {
   const [kycInterview, setKycInterview] = useState(false)
   const [validatorMember, setValidatorMember] = useState(false)
   const [validatorInterview, setValidatorInterview] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     if (
@@ -49,6 +50,7 @@ function App() {
       query.get('environtment') &&
       query.get('lead_id')
     ) {
+      setIsLoading(true)
       setParams({
         ...params,
         x_app_token: query.get('x_app_token'),
@@ -66,6 +68,7 @@ function App() {
         .then((res) => {
           if (res.data?.success) {
             setKabayanMember(transformKabayanMember(res.data?.data))
+            setIsLoading(false)
           }
         })
         .catch((err) => console.log('err => ', err))
@@ -81,6 +84,7 @@ function App() {
             setKabayanInterview(
               transformKabayanInterview(res.data?.data),
             )
+            setIsLoading(false)
           }
         })
         .catch((err) => console.log('err => ', err))
@@ -95,6 +99,7 @@ function App() {
         .then((res) => {
           if (res.data?.success) {
             setKycMember(transformKycMember(res.data?.data))
+            setIsLoading(false)
           }
         })
         .catch((err) => console.log('err => ', err))
@@ -108,6 +113,7 @@ function App() {
         .then((res) => {
           if (res.data?.success) {
             setKycInterview(transformKycInterview(res.data?.data))
+            setIsLoading(false)
           }
         })
         .catch((err) => console.log('err => ', err))
@@ -189,7 +195,9 @@ function App() {
               />
             </FormGroup>
             <FormGroup>
-              <Button color="primary">Proses</Button>
+              <Button color="primary" disabled={isLoading}>
+                {isLoading ? `Loading ...` : `Proses`}
+              </Button>
             </FormGroup>
           </Form>
         </Col>
