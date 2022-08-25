@@ -1,5 +1,17 @@
 import Axios from 'axios'
 
+export const getKabayanCouchDb = async (params) => {
+  try {
+    const response = await Axios({
+      method: 'GET',
+      url: `${process.env.REACT_APP_API_MEMBER_KABAYAN_UAT_COUCHDB}/${params.lead_id}`,
+    })
+    return response
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 export const getKabayan = async (params) => {
   try {
     const urlApi = {

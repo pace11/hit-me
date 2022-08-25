@@ -27,7 +27,7 @@ import {
   CardHeader,
   CardBody,
 } from 'reactstrap'
-import { getKabayan, getKyc } from './api'
+import { getKabayan, getKyc, getKabayanCouchDb } from './api'
 
 function App() {
   const query = useQuery()
@@ -59,19 +59,32 @@ function App() {
       })
 
       // get kabayan
-      getKabayan({
-        slug: '/members',
+      getKabayanCouchDb({
         lead_id: query.get('lead_id'),
-        environtment: query.get('environtment'),
-        x_app_token: query.get('x_app_token'),
       })
         .then((res) => {
-          if (res.data?.success) {
-            setKabayanMember(transformKabayanMember(res.data?.data))
+          if (res.data?.status === '200') {
+            setKabayanMember(
+              transformKabayanMember(res.data?.data[0]),
+            )
             setIsLoading(false)
           }
         })
         .catch((err) => console.log('err => ', err))
+
+      // getKabayan({
+      //   slug: '/members',
+      //   lead_id: query.get('lead_id'),
+      //   environtment: query.get('environtment'),
+      //   x_app_token: query.get('x_app_token'),
+      // })
+      //   .then((res) => {
+      //     if (res.data?.success) {
+      //       setKabayanMember(transformKabayanMember(res.data?.data))
+      //       setIsLoading(false)
+      //     }
+      //   })
+      //   .catch((err) => console.log('err => ', err))
 
       getKabayan({
         slug: '/interviews',
