@@ -13,12 +13,12 @@ export const validatorString = (a, b) => {
 
 export const transformKabayanMember = (params) => {
   return {
-    lead_id: JSON.stringify(params?.lead_id),
+    lead_id: JSON.stringify(params?.id),
     name: JSON.stringify(params?.name),
-    phone: JSON.stringify(params?.phone),
+    phone: JSON.stringify(params?.phone1),
     email: JSON.stringify(params?.email),
     registration_date: JSON.stringify(
-      params.member.registration_date?.timestamp,
+      params.member?.registration_date,
     ),
     registration_image: JSON.stringify(
       params.member?.registration_image,
@@ -29,7 +29,10 @@ export const transformKabayanMember = (params) => {
     npwp_number: JSON.stringify(params?.npwp_number),
     npwp_image: JSON.stringify(params?.npwp_image),
     npwp_statement: JSON.stringify(params?.npwp_statement_image),
-    address: JSON.stringify(params.location?.address),
+    address:
+      params.location.length > 0
+        ? JSON.stringify(params.location[0]?.address)
+        : JSON.stringify(params.location?.address),
     family_card_image: JSON.stringify(
       params.kyc?.kartukeluarga_image,
     ),
