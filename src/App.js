@@ -210,6 +210,38 @@ function App() {
               {validatorMember && kabayanMember && (
                 <>
                   <p>
+                    <b>lead_id</b>: {kabayanMember?.lead_id}{' '}
+                    {validatorMember?.lead_id ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>name</b>: {kabayanMember?.name}{' '}
+                    {validatorMember?.name ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>phone</b>: {kabayanMember?.phone}{' '}
+                    {validatorMember?.phone ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>email</b>: {kabayanMember?.email}{' '}
+                    {validatorMember?.email ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
                     <b>registration_date</b>:{' '}
                     {kabayanMember?.registration_date}{' '}
                     {validatorMember?.registration_date ? (
@@ -306,6 +338,38 @@ function App() {
             <CardBody>
               {validatorMember && kycMember && (
                 <>
+                  <p>
+                    <b>lead_id</b>: {kycMember?.lead_id}{' '}
+                    {validatorMember?.lead_id ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>name</b>: {kycMember?.name}{' '}
+                    {validatorMember?.name ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>phone</b>: {kycMember?.phone}{' '}
+                    {validatorMember?.phone ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>email</b>: {kycMember?.email}{' '}
+                    {validatorMember?.email ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
                   <p>
                     <b>registration_date</b>:{' '}
                     {kycMember?.registration_date}{' '}

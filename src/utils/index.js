@@ -13,6 +13,10 @@ export const validatorString = (a, b) => {
 
 export const transformKabayanMember = (params) => {
   return {
+    lead_id: JSON.stringify(params?.lead_id),
+    name: JSON.stringify(params?.name),
+    phone: JSON.stringify(params?.phone),
+    email: JSON.stringify(params?.email),
     registration_date: JSON.stringify(
       params.member.registration_date?.timestamp,
     ),
@@ -40,6 +44,10 @@ export const transformKabayanInterview = (params) => {
 
 export const transformKycMember = (params) => {
   return {
+    lead_id: JSON.stringify(params?.id),
+    name: JSON.stringify(params?.name),
+    phone: JSON.stringify(params?.phone1),
+    email: JSON.stringify(params?.email),
     registration_date: JSON.stringify(params?.registration_date),
     registration_image: JSON.stringify(params?.registration_image),
     kyc_image: JSON.stringify(params?.kyc_image),
@@ -61,6 +69,30 @@ export const transformKycInterview = (params) => {
 
 export const validationMember = (params1, params2) => {
   return {
+    lead_id:
+      params1.lead_id === params2.lead_id &&
+      (params1.lead_id !== `""` || params2.lead_id !== `""`) &&
+      (params1.lead_id !== 'false' || params2.lead_id !== 'false')
+        ? true
+        : false,
+    name:
+      params1.name === params2.name &&
+      (params1.name !== `""` || params2.name !== `""`) &&
+      (params1.name !== 'false' || params2.name !== 'false')
+        ? true
+        : false,
+    phone:
+      params1.phone === params2.phone &&
+      (params1.phone !== `""` || params2.phone !== `""`) &&
+      (params1.phone !== 'false' || params2.phone !== 'false')
+        ? true
+        : false,
+    email:
+      params1.email === params2.email &&
+      (params1.email !== `""` || params2.email !== `""`) &&
+      (params1.email !== 'false' || params2.email !== 'false')
+        ? true
+        : false,
     registration_date:
       params1.registration_date === params2.registration_date &&
       (params1.registration_date !== `""` ||
