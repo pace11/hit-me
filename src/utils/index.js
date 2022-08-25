@@ -30,9 +30,9 @@ export const transformKabayanMember = (params) => {
     npwp_image: JSON.stringify(params?.npwp_image),
     npwp_statement: JSON.stringify(params?.npwp_statement_image),
     address:
-      params.location.length > 0
-        ? JSON.stringify(params.location[0]?.address)
-        : JSON.stringify(params.location?.address),
+      params.locations.length > 0
+        ? JSON.stringify(params.locations[0]?.address)
+        : JSON.stringify(params.locations?.address),
     family_card_image: JSON.stringify(
       params.kyc?.kartukeluarga_image,
     ),
