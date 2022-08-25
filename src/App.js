@@ -255,6 +255,22 @@ function App() {
                     )}
                   </p>
                   <p>
+                    <b>created_at</b>: {kabayanMember?.created_at}{' '}
+                    {validatorMember?.created_at ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>updated_at</b>: {kabayanMember?.updated_at}{' '}
+                    {validatorMember?.updated_at ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
                     <b>registration_date</b>:{' '}
                     {kabayanMember?.registration_date}{' '}
                     {validatorMember?.registration_date ? (
@@ -420,6 +436,22 @@ function App() {
                     )}
                   </p>
                   <p>
+                    <b>created_at</b>: {kycMember?.created_at}{' '}
+                    {validatorMember?.created_at ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>updated_at</b>: {kycMember?.updated_at}{' '}
+                    {validatorMember?.updated_at ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
                     <b>registration_date</b>:{' '}
                     {kycMember?.registration_date}{' '}
                     {validatorMember?.registration_date ? (
@@ -550,6 +582,14 @@ function App() {
               {kabayanInterview && (
                 <>
                   <p>
+                    <b>created_at</b>: {kabayanInterview?.created_at}{' '}
+                    {validatorInterview?.created_at ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
                     <b>interview_date</b>:{' '}
                     {kabayanInterview?.interview_date}{' '}
                     {validatorInterview?.interview_date ? (
@@ -621,6 +661,14 @@ function App() {
             <CardBody>
               {kycInterview && (
                 <>
+                  <p>
+                    <b>created_at</b>: {kycInterview?.created_at}{' '}
+                    {validatorInterview?.created_at ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
                   <p>
                     <b>interview_date</b>:{' '}
                     {kycInterview?.interview_date}{' '}

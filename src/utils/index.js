@@ -17,6 +17,8 @@ export const transformKabayanMember = (params) => {
     name: JSON.stringify(params?.name),
     phone: JSON.stringify(params?.phone1),
     email: JSON.stringify(params?.email),
+    created_at: JSON.stringify(params?.createdAt),
+    updated_at: JSON.stringify(params?.updatedAt),
     registration_date: JSON.stringify(
       params.member?.registration_date,
     ),
@@ -41,6 +43,7 @@ export const transformKabayanMember = (params) => {
 
 export const transformKabayanInterview = (params) => {
   return {
+    created_at: JSON.stringify(params.created_at?.date),
     interview_date: JSON.stringify(params.date?.timestamp),
     nama_petugas: JSON.stringify(params.created_by?.name),
     email_petugas: JSON.stringify(params.created_by?.email),
@@ -57,6 +60,8 @@ export const transformKycMember = (params) => {
     name: JSON.stringify(params?.name),
     phone: JSON.stringify(params?.phone1),
     email: JSON.stringify(params?.email),
+    created_at: JSON.stringify(params?.created_at),
+    updated_at: JSON.stringify(params?.updated_at),
     registration_date: JSON.stringify(params?.registration_date),
     registration_image: JSON.stringify(params?.registration_image),
     kyc_image: JSON.stringify(params?.kyc_image),
@@ -72,6 +77,7 @@ export const transformKycMember = (params) => {
 
 export const transformKycInterview = (params) => {
   return {
+    created_at: JSON.stringify(params?.created_at),
     interview_date: JSON.stringify(params?.interview_date),
     nama_petugas: JSON.stringify(params?.created_by_name),
     email_petugas: JSON.stringify(params?.created_by_email),
@@ -106,6 +112,20 @@ export const validationMember = (params1, params2) => {
       params1.email === params2.email &&
       (params1.email !== `""` || params2.email !== `""`) &&
       (params1.email !== 'false' || params2.email !== 'false')
+        ? true
+        : false,
+    created_at:
+      params1.created_at === params2.created_at &&
+      (params1.created_at !== `""` || params2.created_at !== `""`) &&
+      (params1.created_at !== 'false' ||
+        params2.created_at !== 'false')
+        ? true
+        : false,
+    updated_at:
+      params1.updated_at === params2.updated_at &&
+      (params1.updated_at !== `""` || params2.updated_at !== `""`) &&
+      (params1.updated_at !== 'false' ||
+        params2.updated_at !== 'false')
         ? true
         : false,
     registration_date:
@@ -188,6 +208,13 @@ export const validationMember = (params1, params2) => {
 
 export const validationInterview = (params1, params2) => {
   return {
+    created_at:
+      params1.created_at === params2.created_at &&
+      (params1.created_at !== `""` || params2.created_at !== `""`) &&
+      (params1.created_at !== 'false' ||
+        params2.created_at !== 'false')
+        ? true
+        : false,
     interview_date:
       params1.interview_date === params2.interview_date &&
       (params1.interview_date !== `""` ||
