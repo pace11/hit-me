@@ -39,6 +39,12 @@ export const transformKabayanMember = (params) => {
 export const transformKabayanInterview = (params) => {
   return {
     interview_date: JSON.stringify(params.date?.timestamp),
+    nama_petugas: JSON.stringify(params.created_by?.name),
+    email_petugas: JSON.stringify(params.created_by?.email),
+    file_surat_kuasa: JSON.stringify(params?.procuration_image),
+    file_surat_keterangan_usaha: JSON.stringify(
+      params?.business_certificate,
+    ),
   }
 }
 
@@ -64,6 +70,12 @@ export const transformKycMember = (params) => {
 export const transformKycInterview = (params) => {
   return {
     interview_date: JSON.stringify(params?.interview_date),
+    nama_petugas: JSON.stringify(params?.created_by_name),
+    email_petugas: JSON.stringify(params?.created_by_email),
+    file_surat_kuasa: JSON.stringify(params?.procuration_image),
+    file_surat_keterangan_usaha: JSON.stringify(
+      params?.business_certificate_image,
+    ),
   }
 }
 
@@ -179,6 +191,39 @@ export const validationInterview = (params1, params2) => {
         params2.interview_date !== `""`) &&
       (params1.interview_date !== 'false' ||
         params2.interview_date !== 'false')
+        ? true
+        : false,
+    nama_petugas:
+      params1.nama_petugas === params2.nama_petugas &&
+      (params1.nama_petugas !== `""` ||
+        params2.nama_petugas !== `""`) &&
+      (params1.nama_petugas !== 'false' ||
+        params2.nama_petugas !== 'false')
+        ? true
+        : false,
+    email_petugas:
+      params1.email_petugas === params2.email_petugas &&
+      (params1.email_petugas !== `""` ||
+        params2.email_petugas !== `""`) &&
+      (params1.email_petugas !== 'false' ||
+        params2.email_petugas !== 'false')
+        ? true
+        : false,
+    file_surat_kuasa:
+      params1.file_surat_kuasa === params2.file_surat_kuasa &&
+      (params1.file_surat_kuasa !== `""` ||
+        params2.file_surat_kuasa !== `""`) &&
+      (params1.file_surat_kuasa !== 'false' ||
+        params2.file_surat_kuasa !== 'false')
+        ? true
+        : false,
+    file_surat_keterangan_usaha:
+      params1.file_surat_keterangan_usaha ===
+        params2.file_surat_keterangan_usaha &&
+      (params1.file_surat_keterangan_usaha !== `""` ||
+        params2.file_surat_keterangan_usaha !== `""`) &&
+      (params1.file_surat_keterangan_usaha !== 'false' ||
+        params2.file_surat_keterangan_usaha !== 'false')
         ? true
         : false,
   }

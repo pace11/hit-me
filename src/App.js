@@ -252,7 +252,15 @@ function App() {
                   </p>
                   <p>
                     <b>registration_image</b>:{' '}
-                    {kabayanMember?.registration_image}{' '}
+                    <a
+                      href={JSON.parse(
+                        kabayanMember?.registration_image,
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kabayanMember?.registration_image}
+                    </a>{' '}
                     {validatorMember?.registration_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -260,7 +268,14 @@ function App() {
                     )}
                   </p>
                   <p>
-                    <b>kyc_image</b>: {kabayanMember?.kyc_image}{' '}
+                    <b>kyc_image</b>:{' '}
+                    <a
+                      href={JSON.parse(kabayanMember?.kyc_image)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kabayanMember?.kyc_image}
+                    </a>{' '}
                     {validatorMember?.kyc_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -294,7 +309,14 @@ function App() {
                     )}
                   </p>
                   <p>
-                    <b>npwp_image</b>: {kabayanMember?.npwp_image}{' '}
+                    <b>npwp_image</b>:{' '}
+                    <a
+                      href={JSON.parse(kabayanMember?.npwp_image)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kabayanMember?.npwp_image}
+                    </a>{' '}
                     {validatorMember?.npwp_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -303,7 +325,13 @@ function App() {
                   </p>
                   <p>
                     <b>npwp_statement</b>:{' '}
-                    {kabayanMember?.npwp_statement}{' '}
+                    <a
+                      href={JSON.parse(kabayanMember?.npwp_statement)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kabayanMember?.npwp_statement}
+                    </a>{' '}
                     {validatorMember?.npwp_statement ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -320,7 +348,15 @@ function App() {
                   </p>
                   <p>
                     <b>family_card_image</b>:{' '}
-                    {kabayanMember?.family_card_image}{' '}
+                    <a
+                      href={JSON.parse(
+                        kabayanMember?.family_card_image,
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kabayanMember?.family_card_image}
+                    </a>{' '}
                     {validatorMember?.family_card_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -381,7 +417,13 @@ function App() {
                   </p>
                   <p>
                     <b>registration_image</b>:{' '}
-                    {kycMember?.registration_image}{' '}
+                    <a
+                      href={JSON.parse(kycMember?.registration_image)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kycMember?.registration_image}
+                    </a>{' '}
                     {validatorMember?.registration_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -389,7 +431,14 @@ function App() {
                     )}
                   </p>
                   <p>
-                    <b>kyc_image</b>: {kycMember?.kyc_image}{' '}
+                    <b>kyc_image</b>:{' '}
+                    <a
+                      href={JSON.parse(kycMember?.kyc_image)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kycMember?.kyc_image}
+                    </a>{' '}
                     {validatorMember?.kyc_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -422,7 +471,14 @@ function App() {
                     )}
                   </p>
                   <p>
-                    <b>npwp_image</b>: {kycMember?.npwp_image}{' '}
+                    <b>npwp_image</b>:{' '}
+                    <a
+                      href={JSON.parse(kycMember?.npwp_image)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kycMember?.npwp_image}
+                    </a>{' '}
                     {validatorMember?.npwp_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -430,7 +486,14 @@ function App() {
                     )}
                   </p>
                   <p>
-                    <b>npwp_statement</b>: {kycMember?.npwp_statement}{' '}
+                    <b>npwp_statement</b>:{' '}
+                    <a
+                      href={JSON.parse(kycMember?.npwp_statement)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kycMember?.npwp_statement}
+                    </a>{' '}
                     {validatorMember?.npwp_statement ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -447,7 +510,13 @@ function App() {
                   </p>
                   <p>
                     <b>family_card_image</b>:{' '}
-                    {kycMember?.family_card_image}{' '}
+                    <a
+                      href={JSON.parse(kycMember?.family_card_image)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kycMember?.family_card_image}
+                    </a>{' '}
                     {validatorMember?.family_card_image ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
@@ -476,6 +545,58 @@ function App() {
                       <BsFillXCircleFill color="#db284e" />
                     )}
                   </p>
+                  <p>
+                    <b>nama_petugas</b>:{' '}
+                    {kabayanInterview?.nama_petugas}{' '}
+                    {validatorInterview?.nama_petugas ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>email_petugas</b>:{' '}
+                    {kabayanInterview?.email_petugas}{' '}
+                    {validatorInterview?.email_petugas ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>file_surat_kuasa</b>:{' '}
+                    <a
+                      href={JSON.parse(
+                        kabayanInterview?.file_surat_kuasa,
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kabayanInterview?.file_surat_kuasa}
+                    </a>{' '}
+                    {validatorInterview?.file_surat_kuasa ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>file_surat_keterangan_usaha</b>:{' '}
+                    <a
+                      href={JSON.parse(
+                        kabayanInterview?.file_surat_keterangan_usaha,
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kabayanInterview?.file_surat_keterangan_usaha}
+                    </a>{' '}
+                    {validatorInterview?.file_surat_keterangan_usaha ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
                 </>
               )}
             </CardBody>
@@ -491,6 +612,57 @@ function App() {
                     <b>interview_date</b>:{' '}
                     {kycInterview?.interview_date}{' '}
                     {validatorInterview?.interview_date ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>nama_petugas</b>: {kycInterview?.nama_petugas}{' '}
+                    {validatorInterview?.nama_petugas ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>email_petugas</b>:{' '}
+                    {kycInterview?.email_petugas}{' '}
+                    {validatorInterview?.email_petugas ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>file_surat_kuasa</b>:{' '}
+                    <a
+                      href={JSON.parse(
+                        kycInterview?.file_surat_kuasa,
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kycInterview?.file_surat_kuasa}
+                    </a>{' '}
+                    {validatorInterview?.file_surat_kuasa ? (
+                      <BsFillCheckCircleFill color="#63BA76" />
+                    ) : (
+                      <BsFillXCircleFill color="#db284e" />
+                    )}
+                  </p>
+                  <p>
+                    <b>file_surat_keterangan_usaha</b>:{' '}
+                    <a
+                      href={JSON.parse(
+                        kycInterview?.file_surat_keterangan_usaha,
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {kycInterview?.file_surat_keterangan_usaha}
+                    </a>{' '}
+                    {validatorInterview?.file_surat_keterangan_usaha ? (
                       <BsFillCheckCircleFill color="#63BA76" />
                     ) : (
                       <BsFillXCircleFill color="#db284e" />
