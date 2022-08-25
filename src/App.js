@@ -207,7 +207,7 @@ function App() {
           <Card className="my-2" color="primary" outline>
             <CardHeader>Kabayan Member</CardHeader>
             <CardBody>
-              {validatorMember && kabayanMember && (
+              {kabayanMember && (
                 <>
                   <p>
                     <b>lead_id</b>: {kabayanMember?.lead_id}{' '}
@@ -372,7 +372,7 @@ function App() {
           <Card className="my-2" color="primary" outline>
             <CardHeader>KYC Member</CardHeader>
             <CardBody>
-              {validatorMember && kycMember && (
+              {kycMember && (
                 <>
                   <p>
                     <b>lead_id</b>: {kycMember?.lead_id}{' '}
@@ -534,7 +534,7 @@ function App() {
           <Card className="my-2" color="primary" outline>
             <CardHeader>Kabayan Interview</CardHeader>
             <CardBody>
-              {validatorInterview && kabayanInterview && (
+              {kabayanInterview && (
                 <>
                   <p>
                     <b>interview_date</b>:{' '}
@@ -606,7 +606,7 @@ function App() {
           <Card className="my-2" color="primary" outline>
             <CardHeader>KYC Interview</CardHeader>
             <CardBody>
-              {validatorInterview && kycInterview && (
+              {kycInterview && (
                 <>
                   <p>
                     <b>interview_date</b>:{' '}
