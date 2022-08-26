@@ -27,7 +27,7 @@ export const transformKabayanMember = (params) => {
     npwp_statement:
       JSON.stringify(params?.npwp_statement_image) || `""`,
     address:
-      params.locations.length > 0
+    params.locations !== null && params.locations.length > 0
         ? JSON.stringify(params.locations[0]?.address)
         : JSON.stringify(params.locations?.address) || `""`,
     family_card_image:
