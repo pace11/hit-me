@@ -77,6 +77,7 @@ function App() {
       // get kabayan
       getKabayanCouchDb({
         lead_id: query.get('lead_id'),
+        environtment: query.get('environtment'),
       })
         .then((res) => {
           if (res.data?.status === 200) {

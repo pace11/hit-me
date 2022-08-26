@@ -5,6 +5,9 @@ export const getKabayanCouchDb = async (params) => {
     const response = await Axios({
       method: 'GET',
       url: `${process.env.REACT_APP_API_MEMBER_KABAYAN_UAT_COUCHDB}/${params.lead_id}`,
+      headers: {
+        environtment: `${params.environtment}`,
+      },
     })
     return response
   } catch (error) {
