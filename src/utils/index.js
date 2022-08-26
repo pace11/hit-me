@@ -7,37 +7,31 @@ export const useQuery = () => {
   return useMemo(() => new URLSearchParams(search), [search])
 }
 
-export const validatorString = (a, b) => {
-  return
-}
-
 export const transformKabayanMember = (params) => {
   return {
-    lead_id: JSON.stringify(params?.id),
-    name: JSON.stringify(params?.name),
-    phone: JSON.stringify(params?.phone1),
-    email: JSON.stringify(params?.email),
-    created_at: JSON.stringify(params?.createdAt),
-    updated_at: JSON.stringify(params?.updatedAt),
-    registration_date: JSON.stringify(
-      params.member?.registration_date,
-    ),
-    registration_image: JSON.stringify(
-      params.member?.registration_image,
-    ),
-    kyc_image: JSON.stringify(params.kyc?.kyc_image),
-    marriage_status: JSON.stringify(params?.marriage_status),
-    is_having_npwp: JSON.stringify(params?.is_having_npwp),
-    npwp_number: JSON.stringify(params?.npwp_number),
-    npwp_image: JSON.stringify(params?.npwp_image),
-    npwp_statement: JSON.stringify(params?.npwp_statement_image),
+    lead_id: JSON.stringify(params?.id) || `""`,
+    name: JSON.stringify(params?.name) || `""`,
+    phone: JSON.stringify(params?.phone1) || `""`,
+    email: JSON.stringify(params?.email) || `""`,
+    created_at: JSON.stringify(params?.createdAt) || `""`,
+    updated_at: JSON.stringify(params?.updatedAt) || `""`,
+    registration_date:
+      JSON.stringify(params.member?.registration_date) || `""`,
+    registration_image:
+      JSON.stringify(params.member?.registration_image) || `""`,
+    kyc_image: JSON.stringify(params.kyc?.kyc_image) || `""`,
+    marriage_status: JSON.stringify(params?.marriage_status) || `""`,
+    is_having_npwp: JSON.stringify(params?.is_having_npwp) || `""`,
+    npwp_number: JSON.stringify(params?.npwp_number) || `""`,
+    npwp_image: JSON.stringify(params?.npwp_image) || `""`,
+    npwp_statement:
+      JSON.stringify(params?.npwp_statement_image) || `""`,
     address:
       params.locations.length > 0
         ? JSON.stringify(params.locations[0]?.address)
-        : JSON.stringify(params.locations?.address),
-    family_card_image: JSON.stringify(
-      params.kyc?.kartukeluarga_image,
-    ),
+        : JSON.stringify(params.locations?.address) || `""`,
+    family_card_image:
+      JSON.stringify(params.kyc?.kartukeluarga_image) || `""`,
   }
 }
 

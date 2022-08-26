@@ -8,7 +8,7 @@ export const getKabayanCouchDb = async (params) => {
     })
     return response
   } catch (error) {
-    console.error(error)
+    throw error
   }
 }
 
@@ -36,7 +36,7 @@ export const getKabayan = async (params) => {
     })
     return response
   } catch (error) {
-    console.error(error)
+    throw error
   }
 }
 
@@ -64,6 +64,6 @@ export const getKyc = async (params) => {
     })
     return response
   } catch (error) {
-    console.error(error)
+    throw error
   }
 }
