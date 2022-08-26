@@ -78,7 +78,7 @@ function App() {
         lead_id: query.get('lead_id'),
       })
         .then((res) => {
-          if (res.data?.status === '200') {
+          if (res.data?.status === 200) {
             setKabayanMember(
               transformKabayanMember(res.data?.data[0]),
             )
