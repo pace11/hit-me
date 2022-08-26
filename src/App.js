@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
+import ReactLoading from 'react-loading'
 import {
   BsFillCheckCircleFill,
   BsFillXCircleFill,
@@ -258,7 +259,29 @@ function App() {
               />
             </FormGroup>
             <FormGroup>
-              <Button color="primary">Proses</Button>
+              <Button
+                color="primary"
+                disabled={
+                  isLoading.kbMember &&
+                  isLoading.kycMember &&
+                  isLoading.kbInterview &&
+                  isLoading.kycInterview
+                }
+              >
+                {isLoading.kbMember &&
+                isLoading.kycMember &&
+                isLoading.kbInterview &&
+                isLoading.kycInterview ? (
+                  <ReactLoading
+                    type="spin"
+                    color="#fff"
+                    height={25}
+                    width={25}
+                  />
+                ) : (
+                  `Proses`
+                )}
+              </Button>
             </FormGroup>
           </Form>
         </Col>
